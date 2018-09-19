@@ -1,0 +1,25 @@
+{
+  "name": "authoring2_hw1_unger_atkinson",
+  "version": "1.0.0",
+  "description": "hw1 team portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HelenUnger/Authoring2_HW1_Unger_Atkinson.git"
+  },
+  "keywords": [
+    "hw1"
+  ],
+  "author": "Helen Unger & Jacob Atkinson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HelenUnger/Authoring2_HW1_Unger_Atkinson/issues"
+  },
+  "homepage": "https://github.com/HelenUnger/Authoring2_HW1_Unger_Atkinson#readme",
+  "dependencies": {
+    "gulp-sass": "^4.0.1"
+  }
+}
