@@ -1,6 +1,66 @@
 @import '_vars';
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
 background-color: $background-color;
 color: $master-font-color;
 }
+
+.hidden{
+    display: none;
+}
+
+
+
+.heads{
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.personOne, .personTwo{
+    width: 250px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    transition: all .5s;
+    
+}
+
+
+.slide-left{
+    width: 500px;
+    transform: translate(-100%);
+}
+
+.slide-right{
+    width: 500px;
+    transform: translate(100%);
+}
+
+
+
+.personOne{
+    img{
+        width: 480px;
+        top: 0;
+        position: absolute;
+    }
+}
+
+.personTwo{
+    img{
+        width: 500px;
+        right: 0;
+        position: absolute;  
+    }
+}
+
+
