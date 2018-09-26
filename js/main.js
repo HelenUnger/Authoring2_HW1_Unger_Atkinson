@@ -4,30 +4,33 @@
 
     //VARIABLES 
     const leftHead = document.querySelector('.personOne'),
-        rightHead = document.querySelector('.personTwo');
+        rightHead = document.querySelector('.personTwo'),
+        jacobTitle = document.querySelector('#jacob-title'),
+        helenTitle = document.querySelector('#helen-title');
 
     //FUNCTIONS
-    function init(){
-        leftHead.classList.remove('open-side');
-        rightHead.classList.remove('open-side');
-    }
-
     function openSide(e){
-        if (this == leftHead){
-            this.classList.add('slide-right');
-            rightHead.classList.add('hidden');
-        }else if(this == rightHead){
-            this.classList.add('slide-left');
-            leftHead.classList.add('hidden');
+        if (this == leftHead || this == jacobTitle){
+            leftHead.firstChild.classList.add('slide-left');
+            rightHead.classList.add('opacity');
+            helenTitle.classList.add('hidden');
+            jacobTitle.classList.add('main-title');
+        }else if(this == rightHead || this == helenTitle){
+            rightHead.firstChild.classList.add('slide-right');
+            leftHead.classList.add('opacity');
+            jacobTitle.classList.add('hidden');
+            helenTitle.classList.add('main-title');
+        }else{
+            console.log('WHAT');
         }
 
 
     }
 
-
-    init();
     //EVENTLISTENERS
     leftHead.addEventListener('click', openSide);
     rightHead.addEventListener('click', openSide);
+    jacobTitle.addEventListener('click', openSide);
+    helenTitle.addEventListener('click', openSide);
 
 })();
