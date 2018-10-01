@@ -9,11 +9,11 @@
 body {
 background-color: $background-color;
 color: $master-font-color;
-overflow: hidden;
+font-size: 10px;
 }
 
 .hidden{
-    display: none;
+    display: none !important;
 }
 
 .opacity{
@@ -24,28 +24,36 @@ overflow: hidden;
     width: 0 !important;
 }
 
-.heads{
-    margin: 0 auto;
+.grow{
+    width: 60vw !important;
+    height: 60vw !important;
+    opacity: 1 !important;
+}
+
+
+.container{
+    position: relative;
+    min-height: 100vh;
+    height: max-content;
+    max-width: 100vw;
     overflow: hidden;
-    height: 100vh;
-    display: relative;
+    padding-bottom: 340px;
 }
 
 .names{
-    margin: 5% 15%;
+    margin: 25% 15% 0 15%;
     .name-box{
         float: left;
         transition: width 1s ease-in-out , display .3s ease-in-out;
         text-align: center;
         width: 40%;
         h2{
-            font-size: 1em;
-            padding: 20px 5px;
+            padding: 10px 5px;
             color: white;
             background-color: cornflowerblue;
         }
         p{
-            padding: 20px 0;
+            padding: 10px 0;
             color: cornflowerblue;
         }
         &:last-of-type{
@@ -62,44 +70,42 @@ overflow: hidden;
 
 
 .main-title{
+    margin-top: -50px !important;
     width: 100% !important;
 }
 
 
 
+
 .personOne, .personTwo{
     transition: opacity .5s;
+    max-width: 300px;
     img{
         transition: all ease-in-out 1s;
         max-width: 300px;
         position: absolute;
-        bottom: -50px;
+        bottom: 0px;
+        &:hover{
+            z-index: 5;
+        }
     }
 }
 
 .personOne{
-
     img{
-        left: 25%;
+        left: -25%;
         z-index: 1;
-        &:hover{
-            z-index: 5;
-        }
     }
 }
 
 .personTwo{
     img{
-        right: 25%;
-        &:hover{
-            z-index: 5;
-        }
+        right: -25%;
     }   
 }
 
 .slide-left{
     left: 0 !important;
-    // max-width: 300px !important;
 }
 
 .slide-right{
@@ -107,7 +113,37 @@ overflow: hidden;
 }
 
 
+.jacob-boxes, .helen-boxes{
+    margin: 0 auto;
+    width: 60vw;
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+    .box{
+        width: 0;
+        height: 0;
+        opacity: 0;
+        margin: 5px;
+        background-color: darkmagenta;
+    }
+}
 
+.j-, .h- {
+    &box:first-of-type{
+    transition: width .2s ease-in-out 1s, height .2s ease-in-out 1s, opacity linear 3s;
+    background-color: red;
+    }
+
+    &box:nth-of-type(2){
+    transition: width .2s ease-in-out 2s, height .2s ease-in-out 2s, opacity linear 4s;
+    background-color: blue;
+    }
+
+    &box:nth-of-type(3){
+    transition: width .2s ease-in-out 3s, height .2s ease-in-out 3s, opacity 5s;
+    background-color: darkmagenta;
+    }
+}
 
 
 
@@ -170,7 +206,7 @@ overflow: hidden;
 @media screen and (min-width:375px){
 
     .names{
-        margin: 5% 10%;
+        margin: 25% 10%;
     }
     
     .personOne{
@@ -199,7 +235,7 @@ overflow: hidden;
 @media screen and (min-width:400px){
 
     .names{
-        margin: 5% 5%;
+        margin: 35% 5%;
     }
 
     .personOne, .personTwo{
@@ -274,6 +310,10 @@ overflow: hidden;
 
 //===============DESKTOP==============
 @media screen and (min-width:1000px){
+.names{
+    margin: 15% 5%;
+}
+
     .personOne, .personTwo{
         transition: opacity .5s;
         img{
