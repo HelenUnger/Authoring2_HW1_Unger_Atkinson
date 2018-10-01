@@ -7,6 +7,8 @@
         helenHead = document.querySelector('.personTwo'),
         jacobTitle = document.querySelector('#jacob-title'),
         helenTitle = document.querySelector('#helen-title'),
+        jacobDesc = document.querySelector('.j-desc'),
+        helenDesc = document.querySelector('.h-desc'),
         jacobBoxes = document.querySelectorAll('.j-box'),
         helenBoxes = document.querySelectorAll('.h-box');
 
@@ -27,6 +29,7 @@
             helenHead.classList.add('opacity');
             helenTitle.classList.add('hidden');
             jacobTitle.classList.add('main-title');
+            jacobDesc.classList.add('show-desc');
             jacobBoxes.forEach(function(element) {
                 element.classList.add('grow');
               });
@@ -35,6 +38,7 @@
             jacobHead.classList.add('opacity');
             jacobTitle.classList.add('hidden');
             helenTitle.classList.add('main-title');
+            helenDesc.classList.add('show-desc');
             helenBoxes.forEach(function(element) {
                 element.classList.add('grow');
               });
