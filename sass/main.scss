@@ -1,5 +1,11 @@
 @import '_vars';
 
+@font-face
+{
+font-family: 'Abadi MT Condensed Extra Bold';
+src: url('../fonts/Abadi MT Condensed Extra Bold.ttf');
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -8,8 +14,9 @@
 
 body {
 background-color: $background-color;
-color: $master-font-color;
+color: $grey-text;
 font-size: 10px;
+text-align: center;
 }
 
 .hidden{
@@ -28,6 +35,7 @@ font-size: 10px;
     width: auto !important;
     height: auto !important;
     opacity: 1 !important;
+    padding-bottom: 18px;
 }
 
 .grow{
@@ -54,23 +62,29 @@ font-size: 10px;
         float: left;
         transition: width 1s ease-in-out , display .3s ease-in-out;
         text-align: center;
-        width: 40%;
+        width: 45%;
         h2{
-            padding: 10px 5px;
+            padding: 7px 5px;
             color: white;
-            background-color: cornflowerblue;
+            background-color: $blue;
+            text-transform: uppercase;
+            font-family: $title-font-type;
+            font-size: 1.4em;
         }
         p{
-            padding: 10px 0;
-            color: cornflowerblue;
+            margin-bottom: 15px;
+            color: $blue;
+            text-transform: lowercase;
+            font-family: $subtitle-font-type;
+            font-size: 1.6em;
         }
         &:last-of-type{
             float: right;
             h2{
-            background-color: #e24128;
+            background-color: $red;
             }
             p{
-            color: #e24128;
+            color: $red;
             }
         }
     }
@@ -184,11 +198,11 @@ font-size: 10px;
     }
 
     .slide-left{
-        left: 5% !important;
+        left: 3% !important;
     }
     
     .slide-right{
-        right: 5% !important;
+        right: 3% !important;
     }
 
 }
@@ -239,11 +253,11 @@ font-size: 10px;
     }
 
     .slide-left{
-        left: 13% !important;
+        left: 9% !important;
     }
     
     .slide-right{
-        right: 13% !important;
+        right: 9% !important;
     }    
 
 }
@@ -278,11 +292,11 @@ font-size: 10px;
     }
 
     .slide-left{
-        left: 10% !important;
+        left: 14% !important;
     }
     
     .slide-right{
-        right: 10% !important;
+        right: 13% !important;
     }  
 
 }
@@ -314,12 +328,50 @@ font-size: 10px;
     }
 
     .slide-left{
-        left: -10% !important;
+        left: 23% !important;
     }
     
     .slide-right{
-        right: -10% !important;
+        right: 23% !important;
     }  
+
+    .show-desc{
+        width: 100% !important;
+        height: auto !important;
+        opacity: 1 !important;
+        padding: 0 5% 18px 5%;
+        text-align: center;
+        font-size: 1.3em;
+    }
+    
+    .grow{
+        flex-direction: row;
+        width: 29vw !important;
+        height: 29vw !important;
+        opacity: 1 !important;
+    }
+
+    .jacob-boxes, .helen-boxes{
+        width: 100%;
+        justify-content: center;
+        margin-top: -10%;
+     }
+
+     .main-title{
+        margin-top: -25% !important;
+    }
+
+    .names .name-box h2
+    {
+        font-size: 2.6em;
+    }
+
+    .names .name-box p
+    {
+        margin-top: 5px;
+        font-size: 2.3em;
+
+    }
 
 }
 
@@ -333,7 +385,7 @@ font-size: 10px;
     .personOne, .personTwo{
         transition: opacity .5s;
         img{
-            max-width: 400px;
+            max-width: 32vw;
             position: absolute;
             bottom: 0;
         }
@@ -360,5 +412,43 @@ font-size: 10px;
     .slide-right{
         right: 0% !important;
     }
+
+    .main-title{
+        margin-top: -13% !important;
+        font-size: 2.5em;
+    }
+    
+    .grow{
+        flex-direction: row;
+        width: 20vw !important;
+        height: 20vw !important;
+        opacity: 1 !important;
+    }
+
+    .jacob-boxes, .helen-boxes{
+        width: 70%;
+        justify-content: center;
+        top: 55%;
+        position: absolute;
+
+        .j-desc, .h-desc{
+            font-size: 2.6em;
+            margin-bottom: 4%;
+            margin-top: -3%;
+        }
+     }
+
+     .jacob-boxes{
+         right: 0;
+     }
+
+     .helen-boxes{
+         left: 0;
+     }
+
+
+
+
+    
 
 }
