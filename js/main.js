@@ -10,7 +10,9 @@
         jacobDesc = document.querySelector('.j-desc'),
         helenDesc = document.querySelector('.h-desc'),
         jacobBoxes = document.querySelectorAll('.j-box'),
-        helenBoxes = document.querySelectorAll('.h-box');
+        helenBoxes = document.querySelectorAll('.h-box'),
+        mainJBox = document.querySelector('.jacob-boxes'),
+        mainHBox = document.querySelector('.helen-boxes');
 
     //FUNCTIONS
     // function addBoxes(e){
@@ -30,6 +32,7 @@
             helenTitle.classList.add('hidden');
             jacobTitle.classList.add('main-title');
             jacobDesc.classList.add('show-desc');
+            mainHBox.classList.add('hidden');
             jacobBoxes.forEach(function(element) {
                 element.classList.add('grow');
               });
@@ -39,6 +42,7 @@
             jacobTitle.classList.add('hidden');
             helenTitle.classList.add('main-title');
             helenDesc.classList.add('show-desc');
+            mainJBox.classList.add('hidden');
             helenBoxes.forEach(function(element) {
                 element.classList.add('grow');
               });
