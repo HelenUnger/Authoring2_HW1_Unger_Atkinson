@@ -1,9 +1,9 @@
 var jacobData = {
     description: "DESC",
-    links: ['<a href="www.instagram.com"><i class="fab fa-instagram"></i></a>',
-            '<a href="www.instagram.com"><i class="fab fa-youtube"></i></a>',
-            '<a href="www.instagram.com"><i class="fab fa-linkedin"></i></a>',
-            '<a href="www.instagram.com"><i class="fas fa-at"></i></a>'],
+    links: ['<a href="www.instagram.com/jiatkinson7"><i class="fab fa-instagram"></i></a>',
+            '<a href="www.youtube.com/1jiatkinson1"><i class="fab fa-youtube"></i></a>',
+            '<a href="www.linkedin.com/in/jacob-atkinson-906405117"><i class="fab fa-linkedin"></i></a>',
+            '<a href="jiatkinson@xcelco.on.ca"><i class="fas fa-at"></i></a>'],
 
     images: ['jacob-image-1', 'jacob-image-2', 'jacob-image-3'],
 
