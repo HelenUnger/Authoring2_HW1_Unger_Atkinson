@@ -19,6 +19,22 @@ font-size: 10px;
 text-align: center;
 }
 
+.back{
+    font-size: .5em;
+    position: absolute;
+    top: 35px;
+    left: 10px;
+}
+
+iframe{
+    width: 80vw;
+    height: 45vw;
+}
+
+.source{
+    margin: 20vw 0;
+}
+
 .light-box{
     width: 100vw;
     height: 100vh;
@@ -81,6 +97,10 @@ ul{
 
 .box img{
     max-width: 60vw;
+}
+
+.lightBoxImage{
+    max-height: 80vh;
 }
 
 .visible{
@@ -248,7 +268,11 @@ ul{
 }
 
 @media screen and (min-width:375px){
-    
+    .back{
+        top: 50px;
+        left: 5px;
+    }
+
     .personOne{
         left: -15%;
         z-index: 1;
@@ -295,9 +319,13 @@ ul{
 }
 
 @media screen and (min-width:400px){
+    .back{
+        top: 15px;
+        left: 45%;
+    }
 
     .names{
-        margin: 35% 5%;
+        margin: 25% 5% 35% 5%;
     }
     
     .personOne{
@@ -322,6 +350,12 @@ ul{
 
 //===============IPAD==============
 @media screen and (min-width:760px){
+    .back{
+        top: 12%;
+        left: 48%;
+        font-size: .8em;
+    }
+
     .heads{
         margin-top: 0;
     }
@@ -399,9 +433,18 @@ ul{
 
 //===============DESKTOP==============
 @media screen and (min-width:1000px){
-.names{
-    margin: 3% 5%;
-}
+    .back{
+        top: 50px;
+        left: 50px;
+    }
+
+    .names{
+        margin: 3% 5%;
+    }
+
+    .source{
+        margin: 3vw 0;
+    }
 
     .personOne, .personTwo{
         .social-media{
