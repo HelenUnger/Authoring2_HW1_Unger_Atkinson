@@ -19,8 +19,43 @@ font-size: 10px;
 text-align: center;
 }
 
+.light-box{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    background-color: #222;
+    color: #fff;
+    display: none;
+}
+
+.exit{
+    font-size: 3em;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+
+.fab, .fas{
+    font-size: 4em;
+    margin: 0 10px;
+}
+
+ul{
+    text-align: center;
+    li{
+        display: inline-block;
+        list-style: none;
+    }
+}
+
 .hidden{
     display: none !important;
+}
+
+.shown{
+    display: block !important;
 }
 
 .opacity{
@@ -44,7 +79,9 @@ text-align: center;
     opacity: 1 !important;
 }
 
-
+.visible{
+    visibility: visible !important; 
+}
 
 
 .container{
@@ -96,15 +133,22 @@ text-align: center;
     width: 100% !important;
 }
 
+.heads{
+    margin-top: 50px;
+}
 
 .personOne, .personTwo{
     transition: opacity .5s;
+    transition: left ease-in-out 1s, right ease-in-out 1s;
     max-width: 300px;
+    position: absolute;
+    bottom: 0px;
+    .social-media{
+        width: 300px;
+        visibility: hidden;
+    }
     img{
-        transition: all ease-in-out 1s;
         max-width: 300px;
-        position: absolute;
-        bottom: 0px;
         &:hover{
             z-index: 5;
         }
@@ -112,16 +156,12 @@ text-align: center;
 }
 
 .personOne{
-    img{
-        left: -25%;
-        z-index: 1;
-    }
+    left: -25%;
+    z-index: 1;
 }
 
 .personTwo{
-    img{
-        right: -25%;
-    }   
+    right: -25%;   
 }
 
 .slide-left{
@@ -146,26 +186,27 @@ text-align: center;
         margin: 5px;
         background-color: darkmagenta;
         overflow: hidden;
+        z-index: 9;
     }
 }
 
 .j-, .h- {
     &box:first-of-type{
-    transition: width .2s ease-in-out 1s, height .2s ease-in-out 1s, opacity linear 3s;
+    transition: width .1s ease-in-out 0s, height .1s ease-in-out 0s, opacity linear 3s;
     background-color: red;
     }
 
     &box:nth-of-type(2){
-    transition: width .2s ease-in-out 2s, height .2s ease-in-out 2s, opacity linear 4s;
+    transition: width .1s ease-in-out 1s, height .1s ease-in-out 1s, opacity linear 3s;
     background-color: blue;
     }
 
     &box:nth-of-type(3){
-    transition: width .2s ease-in-out 3s, height .2s ease-in-out 3s, opacity 5s;
+    transition: width .1s ease-in-out 2s, height .1s ease-in-out 2s, opacity 4s;
     background-color: darkmagenta;
     }
     &box:nth-of-type(4){
-    transition: width .2s ease-in-out 4s, height .2s ease-in-out 4s, opacity 6s;
+    transition: width .1s ease-in-out 3s, height .1s ease-in-out 3s, opacity 5s;
     background-color: green;
     }
     &desc{
@@ -184,17 +225,12 @@ text-align: center;
 @media screen and (min-width:320px){
     
     .personOne{
-    
-        img{
-            left: -25%;
-            z-index: 1;
-        }
+        left: -25%;
+        z-index: 1;
     }
     
     .personTwo{
-        img{
-            right: -25%;
-        }   
+        right: -25%; 
     }
 
     .slide-left{
@@ -210,16 +246,12 @@ text-align: center;
 @media screen and (min-width:375px){
     
     .personOne{
-        img{
-            left: -15%;
-            z-index: 1;
-        }
+        left: -15%;
+        z-index: 1;
     }
     
     .personTwo{
-        img{
-            right: -15%;        
-        }   
+        right: -15%;
     }
 
     .slide-left{
@@ -240,16 +272,12 @@ text-align: center;
     }
     
     .personOne{
-        img{
-            left: -15%;
-            z-index: 1;
-        }
+        left: -15%;
+        z-index: 1;
     }
     
     .personTwo{
-        img{
-            right: -15%;        
-        }   
+        right: -15%;          
     }
 
     .slide-left{
@@ -267,28 +295,14 @@ text-align: center;
     .names{
         margin: 35% 5%;
     }
-
-    .personOne, .personTwo{
-        transition: opacity .5s;
-        img{
-            max-width: 300px;
-            position: absolute;
-            bottom: 0;
-        }
-    }
     
     .personOne{
-    
-        img{
-            left: -10%;
-            z-index: 1;
-        }
+        left: -10%;
+        z-index: 1;
     }
     
     .personTwo{
-        img{
-            right: -10%;
-        }   
+        right: -10%;
     }
 
     .slide-left{
@@ -304,27 +318,26 @@ text-align: center;
 
 //===============IPAD==============
 @media screen and (min-width:760px){
+    .heads{
+        margin-top: 0;
+    }
+
     .personOne, .personTwo{
-        transition: opacity .5s;
+        .social-media{
+            width: 400px;
+        }
         img{
             max-width: 400px;
-            position: absolute;
-            bottom: 0;
         }
     }
     
     .personOne{
-    
-        img{
-            left: 10%;
-            z-index: 1;
-        }
+        left: 10%;
+        z-index: 1;
     }
     
     .personTwo{
-        img{
-            right: 10%;
-        }   
+        right: 10%;
     }
 
     .slide-left{
@@ -379,30 +392,25 @@ text-align: center;
 //===============DESKTOP==============
 @media screen and (min-width:1000px){
 .names{
-    margin: 15% 5%;
+    margin: 3% 5%;
 }
 
     .personOne, .personTwo{
-        transition: opacity .5s;
+        .social-media{
+            width: 32vw;
+        }
         img{
             max-width: 32vw;
-            position: absolute;
-            bottom: 0;
         }
     }
     
     .personOne{
-    
-        img{
-            left: 25%;
-            z-index: 1;
-        }
+        left: 25%;
+        z-index: 1;
     }
     
     .personTwo{
-        img{
-            right: 25%;
-        }   
+        right: 25%; 
     }
 
     .slide-left{
@@ -414,7 +422,7 @@ text-align: center;
     }
 
     .main-title{
-        margin-top: -13% !important;
+        margin-top: 0% !important;
         font-size: 2.5em;
     }
     
@@ -445,10 +453,11 @@ text-align: center;
      .helen-boxes{
          left: 0;
      }
-
-
-
-
-    
-
 }
+
+@media screen and (min-width:1200px){
+    .slide-right{
+        right: 5% !important;
+    }
+}
+
