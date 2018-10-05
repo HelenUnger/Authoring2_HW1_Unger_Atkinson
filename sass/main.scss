@@ -79,6 +79,10 @@ ul{
     opacity: 1 !important;
 }
 
+.box img{
+    max-width: 60vw;
+}
+
 .visible{
     visibility: visible !important; 
 }
@@ -364,6 +368,10 @@ ul{
         opacity: 1 !important;
     }
 
+    .box img{
+        max-width: 29vw;
+    }
+
     .jacob-boxes, .helen-boxes{
         width: 100%;
         justify-content: center;
@@ -431,6 +439,10 @@ ul{
         width: 20vw !important;
         height: 20vw !important;
         opacity: 1 !important;
+    }
+
+    .box img{
+        max-width: 20vw;
     }
 
     .jacob-boxes, .helen-boxes{
