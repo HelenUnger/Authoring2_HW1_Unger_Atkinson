@@ -65,11 +65,13 @@
     }
 
     function showLightBoxHelen(){
-        let source = this.firstChild.getAttribute('src');
-        source.split(".").pop();
+        let source = this.firstChild.getAttribute('src'),
+        newSrc = source.split(".");
+        newSrc.pop(); 
+        console.log(newSrc);
         lightBox.classList.add('shown');
         bigImage = document.createElement("IMG");
-        bigImage.setAttribute("src", source +"-large.jpg");
+        bigImage.setAttribute("src", newSrc +"-large.jpg");
         bigImage.setAttribute("class", "lightBoxImage");
         lightBox.appendChild(bigImage);
     }
