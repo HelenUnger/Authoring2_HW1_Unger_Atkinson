@@ -67,24 +67,38 @@
     function showLightBoxHelen(){
         let source = this.firstChild.getAttribute('src'),
         newSrc = source.split(".");
+
         newSrc.pop(); 
-        console.log(newSrc);
+        // console.log(newSrc);
         lightBox.classList.add('shown');
         bigImage = document.createElement("IMG");
         bigImage.setAttribute("src", newSrc +"-large.jpg");
         bigImage.setAttribute("class", "lightBoxImage");
-        lightBox.appendChild(bigImage);
+        lightBox.querySelector('.source').appendChild(bigImage);
+        if (newSrc == 'images/helen1'){
+            lightBox.querySelector('.proj-desc').innerHTML = helenData.projectDesc[0];
+        }else if (newSrc == 'images/helen2'){
+            lightBox.querySelector('.proj-desc').innerHTML = helenData.projectDesc[1];
+        }else if (newSrc == 'images/helen3'){
+            lightBox.querySelector('.proj-desc').innerHTML = helenData.projectDesc[2];
+        }else{
+            console.log('what??');
+        }
     }
 
     function showLightBoxJacob(){
         lightBox.classList.add('shown');
-        me = this.firstChild.getAttribute('src');
+        let me = this.firstChild.getAttribute('src');
+
         if (me == 'images/jacob-1.png'){
             lightBox.querySelector('.source').innerHTML = jacobData.videos[0];
+            lightBox.querySelector('.proj-desc').innerHTML = jacobData.projectDesc[0];
         }else if(me == 'images/jacob-2.png'){
             lightBox.querySelector('.source').innerHTML = jacobData.videos[1];
+            lightBox.querySelector('.proj-desc').innerHTML = jacobData.projectDesc[1];
         }else if(me == 'images/jacob-3.png'){
             lightBox.querySelector('.source').innerHTML =jacobData.videos[2];
+            lightBox.querySelector('.proj-desc').innerHTML = jacobData.projectDesc[2];
         }else{
             console.log('whaaa');
         }
