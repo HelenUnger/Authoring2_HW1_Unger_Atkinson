@@ -59,7 +59,9 @@
     }
 
     function closeLightBox(){
+        let element = document.querySelector('.lightBoxImage');
         lightBox.classList.remove('shown');
+        lightBox.removeChild(element);
     }
 
 
