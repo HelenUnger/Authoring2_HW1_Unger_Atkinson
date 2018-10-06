@@ -383,7 +383,7 @@ ul{
     }
     
     .personTwo{
-        right: 10%;
+        right: 18%;
     }
 
     .slide-left{
@@ -456,7 +456,7 @@ ul{
 
     .personOne, .personTwo{
         .social-media{
-            width: 32vw;
+            width: 26vw;
         }
         img{
             max-width: 32vw;
@@ -521,6 +521,10 @@ ul{
 @media screen and (min-width:1200px){
     .slide-right{
         right: 10% !important;
+    }
+
+    .social-media{
+        width: 39vw;
     }
 }
 
