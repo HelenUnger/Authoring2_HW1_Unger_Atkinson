@@ -442,12 +442,17 @@ ul{
 //===============DESKTOP==============
 @media screen and (min-width:1000px){
     .back{
-        top: 50px;
-        left: 50px;
+        top: 70px;
+        left: 100px;
     }
 
     .names{
         margin: 3% 5%;
+    }
+
+    iframe{
+        width: 60vw;
+        height: 25vw; 
     }
 
     .source{
